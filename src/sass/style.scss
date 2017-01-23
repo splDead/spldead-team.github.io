@@ -30,6 +30,129 @@ img {
   color: $team-orange;
 }
 
+.navigation {
+  max-width: 1160px;
+  margin: 5px auto;
+  background: $btn-secondary-color;
+  border-radius: 5px;
+  color: #ffffff;
+  position: relative;
+}
+
+.menu {
+  display: inline-block;
+  position: relative;
+}
+
+.menu__button {
+  display: none;
+}
+
+.menu__button:hover ~ .menu__list{
+  display: block;
+}
+
+.menu__list,
+.submenu {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.menu__item {
+  display: inline-block;
+  padding: 5px 10px;
+  transition: background .3s ease;
+}
+
+.menu__item:hover {
+  cursor: pointer;
+  background: $btn-primary-color;
+}
+
+.menu__item:hover .submenu {
+  display: block;
+  top: 100%;
+}
+
+.submenu {
+  padding-left: 0;
+  font-size: 12px;
+  background: $btn-primary-color;
+  display: none;
+  position: absolute;
+  margin: 0 0 10px -10px;
+}
+
+.submenu__item {
+  padding: 5px 10px;
+}
+
+.submenu__item:hover {
+  background: $team-orange;
+}
+
+.menu__link,
+.submenu__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.contacts {
+  float: right;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.contacts__link {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contacts__svg {
+  height: 18px;
+}
+
+.contacts__telephone {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contacts__work {
+  display: inline-block;
+  text-align: right;
+  margin-top: -1px;
+}
+
+.worktime {
+  display: block;
+  font-size: 10px;
+}
+
+.days {
+  display: inline-block;
+}
+
+.fix-align {
+  vertical-align: top;
+}
+
+.on {
+  width: 5px;
+  height: 2px;
+  background: #ffffff;
+  display: block;
+  margin-bottom: 1px;
+}
+
+.off {
+  width: 5px;
+  height: 2px;
+  background: $team-orange;
+  display: block;
+  margin-bottom: 1px;
+}
+
 .catalog {
   max-width: 1170px;
   margin: 5px auto 0;
@@ -50,7 +173,7 @@ img {
   padding-left: 25px;
   border-left: 1px solid #999999;
   float: right;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .catalog__link {
@@ -67,6 +190,7 @@ img {
   color: $title-color;
   font-size: 12px;
   font-weight: bold;
+  margin-top: 5px;
 }
 
 .catalog__cards {
@@ -171,6 +295,32 @@ img {
 }
 
 @media screen and (max-width: 900px) {
+  .menu__button {
+    display: block;
+    padding: 5px 20px;
+  }
+
+  .menu__list {
+    display: none;
+    padding: 0;
+    position: absolute;
+    background: $btn-secondary-color;
+    left: 10px;
+  }
+
+  .menu__list:hover {
+    display: block;
+  }
+
+  .menu__item {
+    display: block;
+  }
+
+  .menu__item:hover .submenu {
+    top: 0;
+    left: 109%;
+  }
+
   .catalog__card {
     width: calc(33.3333% - 13px);
   }
