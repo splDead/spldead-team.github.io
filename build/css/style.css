@@ -420,9 +420,64 @@ img {
 .team_color {
   color: #ff5a00; }
 
+html, body, .wrap {
+  height: 100%; }
+
+body > .wrap {
+  height: auto;
+  min-height: 100%; }
+
+.footer {
+  position: relative;
+  height: 200px;
+  clear: both;
+  background: url("../img/block_bottom.png") no-repeat bottom center;
+  background-size: cover;
+  max-width: 1170px;
+  margin: -200px auto 0;
+  padding: 20px; }
+
+.footer__list-links {
+  font-size: 10px;
+  text-align: center; }
+
+.footer__link {
+  line-height: 1.1rem;
+  margin: 0 2px; }
+
+.trademarks {
+  font-size: 9px;
+  border-top: 1px solid #333333;
+  padding-top: 10px; }
+
+.copytight, .contact-address {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 45px;
+  font-size: 10px;
+  line-height: 1.05rem; }
+
+.copytight {
+  margin-right: 10px; }
+
+.contact-address {
+  padding-left: 20px;
+  border-left: 1px solid #333333; }
+
+.contact-address__link {
+  color: #ffffff; }
+
+.header {
+  min-height: 154px;
+  max-width: 1170px;
+  margin: 0 auto;
+  background: url("../img/header_back.png") no-repeat top center;
+  background-size: cover; }
+
 .navigation {
   max-width: 1160px;
-  margin: 5px auto;
+  margin: 5px auto 12px;
   background: #23415f;
   border-radius: 5px;
   color: #ffffff;
@@ -434,6 +489,9 @@ img {
 
 .menu__button {
   display: none; }
+
+.menu__button:hover {
+  cursor: pointer; }
 
 .menu__button:hover ~ .menu__list {
   display: block; }
@@ -526,7 +584,7 @@ img {
   max-width: 1170px;
   margin: 5px auto 0;
   background: #ffffff;
-  padding: 20px 30px;
+  padding: 20px 30px 200px;
   border-radius: 10px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); }
 
