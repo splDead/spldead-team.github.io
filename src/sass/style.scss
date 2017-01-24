@@ -6,7 +6,6 @@ $team-orange: #ff5a00;
 $btn-primary-color: #074792;
 $btn-secondary-color: #23415f;
 $subtitle-color: #0070C0;
-$footer-height: 200px;
 
 * {
   box-sizing: border-box;
@@ -31,23 +30,18 @@ img {
   color: $team-orange;
 }
 
-html, body, .wrap {
-  height: 100%;
-}
-
-body > .wrap {
-  height: auto;
-  min-height: 100%;
+.wrap {
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 .footer {
   position: relative;
-  height: $footer-height;
   clear: both;
   background: url("../img/block_bottom.png") no-repeat bottom center;
   background-size: cover;
   max-width: 1170px;
-  margin: -$footer-height auto 0;
+  margin: 0 auto;
   padding: 20px;
 }
 
@@ -67,7 +61,7 @@ body > .wrap {
   padding-top: 10px;
 }
 
-.copytight, .contact-address {
+.copyright, .contact-address {
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -76,7 +70,7 @@ body > .wrap {
   line-height: 1.05rem;
 }
 
-.copytight {
+.copyright {
   margin-right: 10px;
 }
 
@@ -187,6 +181,7 @@ body > .wrap {
 .contacts__telephone {
   display: inline-block;
   vertical-align: top;
+  margin-top: 1px;
 }
 
 .contacts__work {
@@ -225,16 +220,19 @@ body > .wrap {
 }
 
 .catalog {
-  max-width: 1170px;
   margin: 5px auto 0;
   background: #ffffff;
-  padding: 20px 30px $footer-height;
+  padding: 0 5px;
   border-radius: 10px;
   box-shadow: 0 0 6px rgba(black, .3);
 }
 
+.catalog__header {
+  padding: 0 20px;
+}
+
 .catalog__title {
-  font-size: 24px;
+  font-size: 2rem;
   color: $title-color;
   float: left;
   font-weight: normal;
@@ -244,7 +242,7 @@ body > .wrap {
   padding-left: 25px;
   border-left: 1px solid #999999;
   float: right;
-  margin-top: 8px;
+  margin-top: 1.4rem;
 }
 
 .catalog__link {
@@ -271,9 +269,16 @@ body > .wrap {
 .catalog__card {
   display: inline-block;
   text-align: center;
-  margin: 20px 5px;
+  margin: 0 5px 15px;
   width: calc(25% - 15px);
-  font-size: 14px;
+  font-size: 1.2rem;
+  box-shadow: 0 0 1px -1px rgba(0,0,0,.6);
+  padding: 10px;
+  transition: all .3s ease;
+}
+
+.catalog__card:hover {
+  box-shadow: 0 2px 4px 2px rgba(0,0,0,.3);
 }
 
 .catalog__image {
@@ -284,7 +289,7 @@ body > .wrap {
 .catalog__list {
   display: inline-block;
   list-style-type: square;
-  font-size: 12px;
+  font-size: .9rem;
   padding-left: 14px;
   text-align: left;
   white-space: nowrap;
@@ -326,11 +331,12 @@ body > .wrap {
 }
 
 .catalog__texts {
-  font-size: 12px;
+  font-size: .9rem;
+  padding: 0 20px;
 }
 
 .catalog__subtitle {
-  font-size: 16px;
+  font-size: 1.5rem;
   color: $subtitle-color;
 }
 
@@ -365,7 +371,46 @@ body > .wrap {
   color: $team-orange;
 }
 
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .catalog__card {
+    width: calc(33.3333% - 13px);
+  }
+}
+
 @media screen and (max-width: 900px) {
+  .contacts {
+    display: none;
+  }
+
+  .catalog__links {
+    float: left;
+    border-left: none;
+    border-top: 1px solid #999999;
+    padding-left: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 0;
+  }
+
+  .catalog__link_mini-bold {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .catalog__card {
+    width: calc(50% - 13px);
+  }
+}
+
+@media screen and (max-width: 700px) {
   .menu__button {
     display: block;
     padding: 5px 20px;
@@ -391,39 +436,16 @@ body > .wrap {
     top: 0;
     left: 109%;
   }
-
-  .catalog__card {
-    width: calc(33.3333% - 13px);
-  }
 }
 
-@media screen and (max-width: 700px) {
-  .catalog {
-    padding: 10px;
-  }
-
-  .catalog__links {
-    float: left;
-    border-left: none;
-    border-top: 1px solid #999999;
-    padding-left: 0;
-    padding-top: 15px;
-    margin-top: 0;
-  }
-
-  .catalog__link_mini-bold {
-    display: inline-block;
-    margin-right: 10px;
-  }
-
-  .catalog__card {
-    width: calc(50% - 13px);
-  }
-}
-
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 550px) {
   .catalog__card {
     width: 100%;
+    margin: 0 0 5px 0;
+  }
+
+  .catalog__texts {
+    padding: 0 10px;
   }
 }
 
